@@ -80,19 +80,27 @@ body {
 /* BUTTON */
 .btn {
   display: block;
+  width: 100%;              /* 🔥 IMPORTANT */
+  box-sizing: border-box;   /* 🔥 IMPORTANT */
+
   margin-top: 10px;
-  padding: 10px;
+  padding: 10px 6px;        /* side padding kurachu */
+
   text-align: center;
   text-decoration: none;
 
   font-family: 'Orbitron', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;    /* kurachu reduce */
 
   color: #00f5ff;
   border-radius: 12px;
 
   background: rgba(0, 245, 255, 0.08);
   border: 1px solid rgba(0, 245, 255, 0.6);
+
+  white-space: nowrap;      /* single line */
+  overflow: hidden;         /* 🔥 stops overflow */
+  text-overflow: ellipsis;  /* safety */
 
   box-shadow:
     0 0 6px rgba(0, 245, 255, 0.6),
@@ -162,15 +170,8 @@ body {
   font-size: 13px;
 }
 @media (max-width: 480px) {
-  .header h1 {
-    font-size: 24px;
-  }
-
-  .grid {
-    gap: 12px;
-  }
-
-  .torrent-note {
-    font-size: 11px;
+  .btn {
+    font-size: 12px;
+    padding: 9px 4px;
   }
 }
