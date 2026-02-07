@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("app").classList.remove("hidden");
-  }, 600);
+  }, 300);
 });
 
 // One-time torrent notice
