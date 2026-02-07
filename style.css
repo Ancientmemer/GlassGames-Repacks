@@ -153,3 +153,16 @@ body {
 .btn {
   animation: neonPulse 2.8s infinite;
 }
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .torrent-note {
+    font-size: 11px;
+  }
+}
