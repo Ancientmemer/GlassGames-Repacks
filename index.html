@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glass Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+  <p>Loading Games...</p>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+  <!-- HEADER -->
+  <header class="glass header">
+    <h1>Glass Games</h1>
+    <input id="search" type="text" placeholder="Search games..." />
+  </header>
+
+  <!-- NOTE -->
+  <p class="note">
+    ⚠️ This site uses <b>magnet links</b>.  
+    <b>uTorrent / BitTorrent</b> must be installed on your PC to download.
+  </p>
+
+  <!-- GRID -->
+  <section class="grid" id="gameGrid">
+
+    <!-- CARD 1 -->
+    <div class="card glass" data-title="Game One">
+      <img src="https://via.placeholder.com/300x400?text=Game+1" alt="Game 1">
+      <a href="magnet:?xt=urn:btih:YOUR_HASH_1" class="btn">🧲 Download Now</a>
+      <small class="torrent-note">Requires Torrent Client</small>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card glass" data-title="Game Two">
+      <img src="https://via.placeholder.com/300x400?text=Game+2" alt="Game 2">
+      <a href="magnet:?xt=urn:btih:YOUR_HASH_2" class="btn">🧲 Download Now</a>
+      <small class="torrent-note">Requires Torrent Client</small>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card glass" data-title="Game Three">
+      <img src="https://via.placeholder.com/300x400?text=Game+3" alt="Game 3">
+      <a href="magnet:?xt=urn:btih:YOUR_HASH_3" class="btn">🧲 Download Now</a>
+      <small class="torrent-note">Requires Torrent Client</small>
+    </div>
+
+    <!-- copy cards as needed -->
+
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
