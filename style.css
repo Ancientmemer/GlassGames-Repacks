@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* GLASS */
+.glass {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* HEADER */
+.header {
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+}
+.header h1 { margin: 0 0 10px; }
+.header input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+/* NOTE */
+.note {
+  text-align: center;
+  margin: 8px 16px 0;
+  color: #ffd369;
+}
+
+/* GRID: Mobile 3 | Desktop 6 */
+.grid {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  grid-template-columns: repeat(3, 1fr); /* MOBILE */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* CARD */
+.card { padding: 10px; }
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* BUTTON */
+.btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.45);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+}
+
+.torrent-note {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #cfcfcf;
+  margin-top: 4px;
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #0f2027;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.spinner {
+  width: 52px;
+  height: 52px;
+  border: 4px solid #fff;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hidden { display: none; }
